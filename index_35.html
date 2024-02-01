@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kiyoshi Presentation</title>
+<style type="text/css">
+
+#slider {
+    overflow: hidden;
+}
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure img {
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+/*#slider1 {
+    overflow: hidden;
+}
+#slider1 figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    right: 0;
+}
+#slider1 figure img {
+    width: 20%;
+}*/
+
+/*@keyframes slider1 {
+    0% {
+        right: 0;
+    }
+    20% {
+        right: 0;
+    }
+    25% {
+        right: -100%;
+    }
+    45% {
+        right: -100%;
+    }
+    50% {
+        right: -200%;
+    }
+    70% {
+        right: -200%;
+    }
+    75% {
+        right: -300%;
+    }
+    95% {
+        right: -300%;
+    }
+    100% {
+        right: -400%;
+    }
+}*/
+
+#myVideo {
+    position: relative;
+    margin: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0);
+    color: #f1f1f1;
+    width: 110%;
+    padding: 20px;
+}
+  
+
+#myBtn {
+    position: center;
+    width: 130px;
+    font-size: small;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(82, 81, 107, 0.336);
+    color: black;
+    cursor: pointer;
+    overflow: hidden;
+    bottom: 0;
+    justify-content: space-between;
+}
+  
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+</style>
+</head>
+<body>
+    <div id="slider">
+        <figure>
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0001.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0002.jpg">
+            <!--<img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0003.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0004.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0005.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0006.jpg">-->
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0007.jpg">
+            <!--<img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0008.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0009.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0010.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0011.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0012.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0013.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0014.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0015.jpg">-->
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0016.jpg">
+            <!--<img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0017.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0018.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0019.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0020.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0021.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0022.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0023.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0024.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0025.jpg">
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0026.jpg">-->
+            <img src="PPT/Accounting/CHAPTER_8_GROUP_5_page-0001.jpg">
+        </figure>
+    </div>
+
+    <!--<div id="slider1">
+        <figure>
+            <img src="PPT/Example.gif">
+        </figure>
+    </div>-->
+    <video autoplay id="myVideo">
+        <source src="PPT/Example1.mp4" type="video/mp4"> 
+    </video>
+    <div class="content">
+        <button id="myBtn" onclick="myFunction()">Play</button>
+    </div>
+
+
+<script>
+
+    /*document.getElementById("myVideo").click();*/
+
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn")
+    
+    function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        }else{
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+    }
+
+</script>
+</body>
+</html>
